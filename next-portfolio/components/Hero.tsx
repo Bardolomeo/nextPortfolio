@@ -3,7 +3,7 @@ import { Spotlight } from './ui/Spotlight'
 import { GridBackground } from './ui/BackgroundGrid'
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import MagicButton from './ui/MagicButton';
-import { FaLocationArrow, FaMobileButton } from 'react-icons/fa6';
+import { FaLocationArrow } from 'react-icons/fa6';
 import Grid from './Grid';
 
 const Hero = () => {
@@ -27,7 +27,7 @@ const Hero = () => {
 			<p className='z-10 text-white-200 text-xl'>Hi I&apos;m Bard, a web developer based in Italy</p>
 		</div>
 		<a href='/about'className='flex justify-center py-10'>
-			<MagicButton title='Magic Button' position='left' icon={<FaLocationArrow/>} />
+			<MagicButton title='My projects' position='left' icon={<FaLocationArrow/>} />
 		</a>
 		<Grid />
 	</div>

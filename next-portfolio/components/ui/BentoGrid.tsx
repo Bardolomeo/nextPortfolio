@@ -1,7 +1,14 @@
+'use client'
+
 import { cn } from "@/lib/utils";
-import { BackgroundGradientAnimation } from "./GradientBg";
-import { Globe } from "./Globe";
 import { GlobeDemo } from "./GlobeDemo";
+import { BackgroundGradientAnimation } from "./GradientBg";
+import Lottie from "react-lottie";
+import { useState } from "react";
+import animationData from "@/data/confetti.json"
+import MagicButton from "./MagicButton";
+import { HiOutlineMail } from "react-icons/hi";
+
 
 export const BentoGrid = ({
   className,
@@ -13,7 +20,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-rows-6 gap-4 lg:gap-8 mx-auto ",
+        "md:auto-rows-[18rem] grid-cols-1 md:grid md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
         className
       )}
     >
@@ -22,79 +29,117 @@ export const BentoGrid = ({
   );
 };
 
+const style= {
+  background: 'linear-gradient(313deg, rgba(1,0,57,1) 21%, rgba(238,41,81,1) 90%)'
+}
+
 export const BentoGridItem = ({
+  id,
   className,
   title,
   description,
   icon,
-  id,
-  img,
-  imgClassName,
-  titleClassName,
-  spareImg
+  img, 
+  spareImg, 
+  titleClassName, 
+  imgClassName
 }: {
+  id?: number;
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
-  header?: React.ReactNode;
-  icon?: React.ReactNode;
-  id?: number;
-  img?: string;
-  imgClassName?: string;
+  icon?: string
+  img?: string
+  spareImg?: string
   titleClassName?: string;
-  spareImg?: string;
+  imgClassName?: string;
 }) => {
+
+  const [copied, setCopied] = useState(false);
+
+  function handleClick(){
+    setCopied(true);
+    navigator.clipboard.writeText('sapiobard@gmail.com');
+  }
+
   return (
     <div
       className={cn(
-        "relative overflow-hidden row-span-1 rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 max-h-[80vh]",
+        `my-4 md:my-0 row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 ${id === 1 ? 'p-0' : null} ${id === 3 ? 'max-h-[288px]' : null}`,
         className
       )}
-	  style={
-		{
-			background: 'linear-gradient(315deg, hsla(270, 94%, 25%, 1) 0%, hsla(204, 54%, 35%, 1) 66%, hsla(169, 76%, 39%, 1) 100%, hsla(169, 76%, 39%, 1) 100%)'
-		}
-	  }
-    >
-	  <div className={`${id === 5} && flex justify-center h-full`}>
-	  	<div className="w-full h-full absolute z-0 -top-12">
-	  		{img && <img
-			className={cn(imgClassName, 'object-cover object-center md:w-[100vw] md:h-[100vh] sm:w-[100vw] sm:-top-20')}
-			src={img}
-			alt={img}
-			/>}
-		</div>
-		<div className={`absolute right-0 -bottom-5 ${id === 5 && 'w-full opacity-80'}`}>
-			{spareImg && <img
-				className='object-cover object-center'
-				src={spareImg}
-				alt={spareImg}
-			/>}
-		</div>
-	  {id === 6 && (
-		<BackgroundGradientAnimation>
-			<div className="flex absolute z-10 items-center justify-center text-white font-bold"/>
-		</BackgroundGradientAnimation>
-	  )}
-
-	  {id === 2 && (
-		  <GlobeDemo />
-	  )}
-
-	  </div>
-	  <div className={cn(titleClassName, "group-hover/bento:translate-x-2 transition duration-200 z-50")}>
-        <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2 z-50">
+      style={style}
+      
+      >
+      <div className={`group-hover/bento:translate-x-2 transition duration-200  z-50 ${id === 6 && 'self-center'}`}>
+        <img src={icon} alt={icon}></img>
+        {title &&  <div className={cn(titleClassName, "font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2 z-50 px-10 pt-4")}>
           {title}
-		</div>
-	  </div>
-      <div className="group-hover/bento:translate-x-2 transition duration-200 z-50">
-        {icon}
-        <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2 z-50">
-        </div>
-        <div className="font-sans font-normal text-[#c1c2d3] text-sm md:text-xs lg:text-base">
+        </div>}
+        {description && <div className={cn(titleClassName, "font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300 z-50 px-10 pt-4")}>
           {description}
-        </div>
+        </div>}
       </div>
+    {img &&
+    <div className="relative"> 
+      <img src={img} alt={img} className={cn(imgClassName, "z-0 object-cover")}/>
+    </div>}
+    {spareImg && <img src={spareImg} alt={spareImg} className= "z-10 object-cover"/>}
+    {id === 2 &&
+      <GlobeDemo/>
+      }
+    {id === 3 && <div className="flex self-end -top-20 relative h-full max-h-[286px]">
+      <div className="flex flex-col z-10 items-end opacity-50 lg:opacity-50  relative w-fit gap-1 pr-1 -top-8">
+      <span className="py-2 lg:py-4 px-3 text-xs lg:text-sm rounded-lg text-center bg-[#fc3d63] w-20 min-h-8"/>
+      {
+        ["React.js", "Typescript", "Next"].map((item)=>
+          (<span key={item} className="py-3 px-3 text-sm rounded-lg text-center bg-[#a70022] w-20 min-h-12">
+            {item}
+          </span>))
+      }
+      <span className="py-2 lg:py-4 px-3 text-xs lg:text-sm rounded-lg text-center bg-[#fc3d63] w-20 min-h-8"/>
+      <span className="py-2 lg:py-4 px-3 text-xs lg:text-sm rounded-lg text-center bg-[#ba0025] w-20 min-h-8"/>
+      <span className="py-2 lg:py-4 px-3 text-xs lg:text-sm rounded-lg text-center bg-[#fc3d63] w-20 min-h-8"/>
+        </div>
+      <div className="flex flex-col z-10 items-end opacity-50 lg:opacity-50  relative w-fit gap-1 pr-1 -top-8">
+      <span className="py-2 lg:py-4 px-3 text-xs lg:text-sm rounded-lg text-center bg-[#fc0637] w-20 min-h-8"/>
+      <span className="py-2 lg:py-4 px-3 text-xs lg:text-sm rounded-lg text-center bg-[#fe2450] w-20 min-h-8"/>
+        {
+          ["MySQL", "C++", "Godot"].map((item)=>
+            (<span key={item} className="py-3 px-3 text-sm rounded-lg text-center bg-[#a70022] w-20 min-h-12">
+              {item}
+            </span>))
+        }
+      <span className="py-2 px-3 text-xs lg:text-sm rounded-lg text-center bg-[#fc3d63] w-20 min-h-8"/>
+      <span className="py-2 px-3 text-xs lg:text-sm rounded-lg text-center bg-[#ff2551] w-20 min-h-8"/>
+      <span className="py-2 px-3 text-xs lg:text-sm rounded-lg text-center bg-[#fc3d63] w-20 min-h-8"/>
+      </div>
+      </div>}
+      {id === 6 && <div className="relative -top-32 w-full h-full">
+        <div className='z-0 absolute'>
+          <BackgroundGradientAnimation />
+        </div>
+        <div className="relative z-50 h-full">
+          <div className="absolute">
+            <Lottie options={{
+              loop: copied,
+              autoplay: copied,
+              animationData,
+              rendererSettings: {
+                preserveAspectRatio: 'xMidYMid meet'
+              }
+            }} />
+          </div>
+          <div className="w-full h-40 flex justify-center relative items-end top-12">
+            <MagicButton
+              title={`${copied ? 'Email copied' : 'Copy my email'}`}
+              icon={<HiOutlineMail />}
+              position="left"
+              handleClick={handleClick}
+            />
+          </div>
+        </div>
+      </div>}
     </div>
   );
 };

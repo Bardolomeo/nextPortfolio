@@ -395,27 +395,9 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="flex items-center justify-center absolute w-full h-full top-36">
-      <div className="max-w-7xl w-full relative overflow-hidden h-full md:h-[40rem]">
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          className="div"
-        >
-        </motion.div>
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none z-10" />
-        <div className="absolute w-full h-full z-0">
-          <World data={sampleArcs} globeConfig={globeConfig} />
-        </div>
+    <div className="relative flex flex-col w-full h-full overflow-hidden rounded-xl">
+      <div className="absolute z-10  w-[50vh] h-[50vh] self-center">
+        <World data={sampleArcs} globeConfig={globeConfig} />
       </div>
     </div>
   );
