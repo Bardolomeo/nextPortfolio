@@ -5,6 +5,7 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import MagicButton from './ui/MagicButton';
 import { FaLocationArrow } from 'react-icons/fa6';
 import Grid from './Grid';
+import RecentProjects from './RecentProjects';
 
 const Hero = () => {
   return (
@@ -23,13 +24,14 @@ const Hero = () => {
 			<h2 className='text-white-100 z-10 uppercase tracking-widest text-sm'>
 				Dynamic web magic with nextjs
 			</h2>
-			<TextGenerateEffect className='text-center text-[40px] md:max-w-[45vw] sm:max-w-[80vw] items-center' filter={true} words='Transforming Concepts into Seamless User Experiences' />
+			<TextGenerateEffect className='text-center text-[40px] max-w-[40rem] items-center' filter={true} words='Transforming Concepts into Seamless User Experiences' />
 			<p className='z-10 text-white-200 text-xl'>Hi I&apos;m Bard, a web developer based in Italy</p>
 		</div>
 		<a href='/about'className='flex justify-center py-10'>
 			<MagicButton title='My projects' position='left' icon={<FaLocationArrow/>} />
 		</a>
 		<Grid />
+		<RecentProjects />
 	</div>
   );
 }

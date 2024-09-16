@@ -43,7 +43,7 @@ export const navItems = [
 	  id: 4,
 	  title: "Tech enthusiast with a passion for development.",
 	  description: "",
-	  className: "md:col-span-2 max-h-[40vh] md:max-h-full",
+	  className: "md:col-span-2 max-h-[35vh] md:max-h-full",
 	  imgClassName: "relative -bottom-16 w-full h-full",
 	  titleClassName: "justify-start",
 	  img: "/b4.svg",
@@ -53,8 +53,8 @@ export const navItems = [
   
 	{
 	  id: 5,
-	  title: "Currently building a JS Animation library",
-	  description: "The Inside Scoop",
+	  title: "Currently studying next.js",
+	  description: "",
 	  className: "md:col-span-2 max-h-[40vh] md:max-h-full",
 	  imgClassName: "absolute right-0 -bottom-16 md:w-96 w-60",
 	  titleClassName: "justify-center md:justify-start lg:justify-center",
