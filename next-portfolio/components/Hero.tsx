@@ -6,6 +6,8 @@ import MagicButton from './ui/MagicButton';
 import { FaLocationArrow } from 'react-icons/fa6';
 import Grid from './Grid';
 import RecentProjects from './RecentProjects';
+import Testimonials from './Testimonials';
+import Experience from './Experience';
 
 const Hero = () => {
   return (
@@ -32,6 +34,8 @@ const Hero = () => {
 		</a>
 		<Grid />
 		<RecentProjects />
+		<Testimonials />
+		<Experience />
 	</div>
   );
 }

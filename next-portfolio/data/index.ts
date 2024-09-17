@@ -10,7 +10,7 @@ export const navItems = [
 	  id: 1,
 	  title: "I prioritize client collaboration, fostering open communication ",
 	  description: "",
-	  className: "md:col-span-2 max-h-[20vh] md:max-h-full min-w-52",
+	  className: "md:col-span-2 max-h-[20vh] md:max-h-full ml-4 mr-4",
 	  imgClassName: "relative -top-24 z-10",
 	  titleClassName: "",
 	  img: "/b1.svg",
@@ -21,7 +21,7 @@ export const navItems = [
 	  id: 2,
 	  title: "I'm very flexible with time zone communications",
 	  description: "",
-	  className: "h-72 sm:h-72",
+	  className: "h-72 sm:h-72 mr-4 ml-4 md:ml-0",
 	  imgClassName: "",
 	  titleClassName: "justify-start",
 	  img: "",
@@ -32,7 +32,7 @@ export const navItems = [
 	  id: 3,
 	  title: "My tech stack",
 	  description: "I constantly try to improve",
-	  className: "",
+	  className: "ml-4 mr-4 ",
 	  imgClassName: "",
 	  titleClassName: "top-24 relative",
 	  img: "",
@@ -43,7 +43,7 @@ export const navItems = [
 	  id: 4,
 	  title: "Tech enthusiast with a passion for development.",
 	  description: "",
-	  className: "md:col-span-2 max-h-[35vh] md:max-h-full",
+	  className: "md:col-span-2 max-h-[35vh] md:max-h-full mr-4 ml-4 md:ml-0",
 	  imgClassName: "relative -bottom-16 w-full h-full",
 	  titleClassName: "justify-start",
 	  img: "/b4.svg",
@@ -55,7 +55,7 @@ export const navItems = [
 	  id: 5,
 	  title: "Currently studying next.js",
 	  description: "",
-	  className: "md:col-span-2 max-h-[40vh] md:max-h-full",
+	  className: "md:col-span-2 max-h-[40vh] md:max-h-full ml-4 mr-4",
 	  imgClassName: "absolute right-0 -bottom-16 md:w-96 w-60",
 	  titleClassName: "justify-center md:justify-start lg:justify-center",
 	  img: "/b5.svg",
@@ -66,7 +66,7 @@ export const navItems = [
 	  id: 6,
 	  title: "Do you want to start a project together?",
 	  description: "",
-	  className: "max-h-72 md:max-h-full",
+	  className: "max-h-72 md:max-h-full mr-4 ml-4 md:ml-0",
 	  imgClassName: "",
 	  titleClassName: "self-center md:max-w-full max-w-60 text-center",
 	  img: "",
@@ -113,33 +113,33 @@ export const navItems = [
   export const testimonials = [
 	{
 	  quote:
-		"Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-	  name: "Michael Johnson",
-	  title: "Director of AlphaStream Technologies",
+		"I am the Ultimate Life Form!",
+	  name: "Shadow",
+	  title: "The Hedgehog",
 	},
 	{
 	  quote:
-		"Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-	  name: "Michael Johnson",
-	  title: "Director of AlphaStream Technologies",
+		"Chaos.... CONTROL!",
+	  name: "Shadow",
+	  title: "The Hedgehog",
 	},
 	{
 	  quote:
-		"Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-	  name: "Michael Johnson",
-	  title: "Director of AlphaStream Technologies",
+		"If the world chooses to become my enemy, I will fight like I always have!",
+	  name: "Shadow",
+	  title: "The Hedgehog",
 	},
 	{
 	  quote:
-		"Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-	  name: "Michael Johnson",
-	  title: "Director of AlphaStream Technologies",
+		"I am Shadow the Hedgehog. A research experiment, gone deadly wrong. I've caused so much destruction, I should have never been created. This is who I am.",
+	  name: "Shadow",
+	  title: "The Hedgehog",
 	},
 	{
 	  quote:
-		"Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-	  name: "Michael Johnson",
-	  title: "Director of AlphaStream Technologies",
+		"Play time is over...",
+	  name: "Shadow",
+	  title: "The Hedgehog",
 	},
   ];
   

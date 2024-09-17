@@ -15,7 +15,7 @@ function RecentProjects() {
 			{projects.map(({id, title, des, img, iconLists, link}) => (
 				<PinContainer key={id} title={title} href={link} className='w-96 h-96 bg-black-100 flex items-center flex-col'>
 					<div className='relative w-[70%] h-[60%] flex justify-center items-center rounded-xl overflow-hidden pt-4'>
-						<div className='w-full h-full bg-black-100 z-0 relative top-4'>
+						<div className='w-full h-full bg-[rgba(238,41,81,0.1)] z-0 relative top-4'>
 							<img src='/bg.png' alt='bg-image'/>
 						</div>
 						<div>
@@ -26,13 +26,13 @@ function RecentProjects() {
 								/>
 						</div>
 					</div>
-					<h1 className='font-bold md:text-xl text-base line-clamp-2 self-start px-4 py-2'>
+					<h1 className='font-bold md:text-xl text-base line-clamp-2 self-start px-4 py-4'>
 						{title}
 					</h1>
 					<p className=' md:text-sm text-sm line-clamp-2 px-4'>
 						{des}
 					</p>
-					<div className='flex self-start justify-between mt-7 mb-3 relative px-4 pb-3 w-full'>
+					<div className='flex self-start justify-between mb-3 relative px-4 pb-6 -bottom-8 w-full'>
 						<div className='flex relative items-center'>
 							{iconLists.map((icon, index) => (
 								<div key={id} className='border border-white/[0.2] bg-black-100 rounded-full w-8 h-8 flex justify-center items-center'

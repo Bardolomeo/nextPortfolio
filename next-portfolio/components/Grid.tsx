@@ -17,7 +17,7 @@ export default function Grid() {
           icon={icon}
           titleClassName={titleClassName}
           imgClassName={imgClassName}
-          className={cn(className, ``)}
+          className={cn(className, '')}
         />
       ))}
     </BentoGrid>
