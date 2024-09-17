@@ -1,7 +1,6 @@
 import { workExperience } from '@/data'
 import React from 'react'
 import { Button } from './ui/MovingBorders'
-import { CgCardSpades } from 'react-icons/cg'
 
 const Experience = () => {
   return (
