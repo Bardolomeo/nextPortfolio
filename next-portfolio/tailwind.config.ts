@@ -26,6 +26,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        mono: ['var(--font-geist-mono)'],
+        geist: ['var(--font-geist-sans)'], 
+      },
       colors: {
         black: {
           DEFAULT: "#000",

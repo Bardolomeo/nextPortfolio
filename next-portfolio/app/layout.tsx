@@ -3,6 +3,9 @@ import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { GeistMono } from 'geist/font/mono';
+import { GeistSans } from 'geist/font/sans'
+
 
 const inter = Inter({subsets: ["latin"]}); 
 
@@ -30,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${GeistMono.variable} ${GeistSans.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}

@@ -8,6 +8,8 @@ import Grid from './Grid';
 import RecentProjects from './RecentProjects';
 import Testimonials from './Testimonials';
 import Experience from './Experience';
+import Approach from './Approach';
+import Footer from './Footer';
 
 const Hero = () => {
   return (
@@ -29,13 +31,15 @@ const Hero = () => {
 			<TextGenerateEffect className='text-center text-[40px] max-w-[40rem] items-center' filter={true} words='Transforming Concepts into Seamless User Experiences' />
 			<p className='z-10 text-white-200 text-xl'>Hi I&apos;m Bard, a web developer based in Italy</p>
 		</div>
-		<a href='/about'className='flex justify-center py-10'>
-			<MagicButton title='My projects' position='left' icon={<FaLocationArrow/>} />
+		<a href='#projects' className='flex justify-center py-10'>
+			<MagicButton title='My projects' position='left' icon={<FaLocationArrow/>}/>
 		</a>
 		<Grid />
 		<RecentProjects />
 		<Testimonials />
 		<Experience />
+		<Approach />
+		<Footer />
 	</div>
   );
 }
